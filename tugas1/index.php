@@ -6,6 +6,7 @@ $pensil_warna = 25000 * 1;
 
 $subtotal = $buku_tulis + $pulpen + $penggaris + $pensil_warna;
 $diskon = 5;
+$total_diskon = ($diskon / 100) * $subtotal;
 $total_diskon = $subtotal / 100 * $diskon;
 $total = $subtotal - $total_diskon;
 
@@ -19,10 +20,10 @@ echo "pensil_warna  Rp25.000 x 1 = Rp" . number_format($pensil_warna, 0, ".", ".
 echo "<br/>";
 echo "<br/>";
 
-echo "sub total: Rp" . number_format($subtotal, 0, '.', '.');
+echo "Total sebelum diskon: Rp" . number_format($subtotal, 0, '.', '.');
 echo "<br/>";
 echo "Diskon: " . $diskon . "%";
 echo "<br/>";
 echo "Total Diskon: Rp" . number_format($total_diskon, 0, ".", ".");
 echo "<br/>";
-echo "Total: Rp" . number_format($total, 0, ".", '.');
+echo "Total sesudah diskon: Rp" . number_format($total, 0, ".", '.');
